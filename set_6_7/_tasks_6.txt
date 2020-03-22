@@ -1,0 +1,16 @@
+Zadania na ćwiczenia 6
+
+1. Dany jest zestaw odważników int t[N]. Napisać funkcję, która sprawdza czy jest 
+możliwe odważenie określonej masy. Odważniki można umieszczać tylko na jednej 
+szalce.
+
+2. Poprzednie zadanie, odważniki można umieszczać na obu szalkach. 
+
+3. Poprzednie zadanie. Program powinien wypisywać wybrane odważniki.
+
+4. „Waga” liczby jest określona jako ilość różnych czynników pierwszych liczby. Na 
+przykład waga(1)=0, waga(2)=1, waga(6)=2, waga(30)=3, waga(64)=1. Dana jest 
+tablica: int t[N]. Tablica zawiera liczby naturalne. Proszę napisać funkcję, która 
+sprawdza czy można elementy tablicy podzielić na 3 podzbiory o równych wagach. Do 
+funkcji należy przekazać wyłącznie tablicę, funkcja powinna zwrócić wartość typu 
+bool.
