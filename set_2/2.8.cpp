@@ -1,23 +1,18 @@
 #include <iostream>
-
 using namespace std;
 
-int main()
-{
+int main(){
     int a,b,n;
 
-    cout<<"Podaj a: ";
+    cout<<"Type a: ";
     cin>>a;
-    cout<<"Podaj b: ";
+    cout<<"Type b: ";
     cin>>b;
-    cout<<"Podaj n: ";
+    cout<<"Type n: ";
     cin>>n;
+    cout<<a/b<<".";
 
-   cout<<a/b<<".";
-
-
-    for(int i=0; i<n; i++)
-    {
+    for(int i = 0; i < n; i++){
         a = a%b;
         a *= 10;
        cout<<a/b;

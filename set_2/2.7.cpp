@@ -1,13 +1,10 @@
 #include <iostream>
 #include <math.h>
-
 using namespace std;
 
-int n,d;
-
-int main()
-{
-    cout<<"Podaj liczbe: ";
+int main(){
+    int n, d = 0;
+    cout<<"Type number: ";
     cin>>n;
 
     d = sqrt(n);
@@ -17,7 +14,5 @@ int main()
     else
         while(n%d != 0)
             d++;
-
     cout<<d<<"*"<<n/d;
-
 }

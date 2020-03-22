@@ -1,14 +1,12 @@
 #include <iostream>
-
 using namespace std;
 
-int main()
-{
-    double suma = 0;
+int main(){
+    double sum = 0;
     double a = 1;
     int n = 10000;
     double k;
-    cout<<"Podaj k: ";
+    cout<<"Type k: ";
     cin>>k;
     double pp = (k-1)/n;
 
@@ -16,8 +14,8 @@ int main()
 
   for(int i=0;i<n;i++)
     {
-        suma += (1/sr)*pp;
+        sum += (1/sr)*pp;
         sr+=pp;
     }
-    cout<<" Pole: "<< suma;
+    cout<<" Pole: "<< sum;
 }

@@ -1,51 +1,35 @@
 #include <iostream>
 using namespace std;
 
-int i, l,x, poz;
-int dziel = 7;
-int bin,nowy;
 
-int main()
-{
-    cout<<"Podaj liczbe: ";
+int main(){
+int i = 0, l =0, x, pos = 0, div = 7, bin = 0, new_num = 0;
+    cout<<"Type number: ";
     cin>>x;
+int tmp_x = x;
 
-    int tmp_x = x;
-
-    while(tmp_x)
-    {
+    while(tmp_x){
         tmp_x /=10;
         l++;
     }
-cout<<"l: "<<l<<endl;
-
-    for(int k = 1; k < (1<<l); k++ )
-    {   tmp_x = x;
-        nowy = 0;
+    for(int k = 1; k < (1<<l); k++){   tmp_x = x;
+        new_num = 0;
         bin = k;
-        poz = 1;
+        pos = 1;
 
-      while(bin)
-        {
+      while(bin){
 
-            if(bin%2 == 1)
-            {
-                nowy += tmp_x%10*poz;
-                poz *= 10;
+            if(bin%2 == 1){
+                new_num += tmp_x%10*pos;
+                pos *= 10;
             }
-
             tmp_x /= 10;
             bin /= 2;
-
         }
-
-        if(nowy%dziel==0)
-               {
-                   i++;
-                   cout<<nowy<<endl;
-               }
-
+        if(new_num%div == 0){
+            i++;
+            cout<<new_num<<endl;
+        }
     }
-
-    cout<<i;
+    cout<<"How many: "<<i;
 }
