@@ -1,26 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int n,tmp,i;
-
-int main()
-{
-    cout<<"Podaj liczbe: ";
+int main(){
+    int n,tmp,i = 0;
+    cout<<"Type number: ";
     cin>>n;
-
     tmp = n;
-
-    while(tmp)
-    {
-        tmp/=10;
+    while(tmp){
+        tmp /= 10;
         i++;
     }
     tmp = n;
-    while(tmp)
-    {
-        if(tmp%10 == i)
-        {cout<<"woohoo";
-        break;}
-        tmp/=10;
+    while(tmp){
+        if(tmp%10 == i){
+            cout<<"YES";
+            break;
+        }
+        tmp /= 10;
     }
 }
