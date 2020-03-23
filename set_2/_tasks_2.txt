@@ -57,7 +57,7 @@ co najmniej 5 elementów.
 czy liczba ta zawiera cyfrę równą liczbie swoich cyfr. 
  
 15. Napisz program wczytujący liczbę naturalną z klawiatury i odpowiadający na pytanie, 
-czy liczba zakończona jest unikalną cyfrą. 
+czy liczba zakończona jest unikalną cyfrą.
  
 16. Dane są dwie liczby naturalne z których budujemy trzecią  liczbę. W budowanej 
 liczbie muszą wystąpić wszystkie cyfry  występujące  w liczbach wejściowych. 
