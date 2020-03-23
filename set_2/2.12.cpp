@@ -1,26 +1,20 @@
 #include <iostream>
-
 using namespace std;
 
-int n, buf;
-bool jest;
-
-int main()
-{
-    cout<<"Podaj liczbe: ";
+int main(){
+    int n, prev;
+    bool check;
+    cout<<"Type number: ";
     cin>>n;
 
-    while(n)
-    {
-        buf = n%10;
-        n/=10;
-        if(buf<(n%10))
-           {
-               jest = false;
+    while(n){
+        prev = n%10;
+        n /= 10;
+        if(prev <= (n%10)){
+               check = false;
                break;
            }
-        jest = true;
+    check = true;
     }
-    if(jest)
-        cout<<"wooohoo";
+    cout<<check;
 }
