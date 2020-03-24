@@ -6,7 +6,7 @@ long long n, cop,j,d;
 long long sil = 1;
 
 int main(){
-    cout<<"Podaj N: ";
+    cout<<"Type N: ";
     cin>>n;
 
     cop = n;
@@ -22,5 +22,5 @@ int main(){
                 sil /= 10;
         sil = sil%d;
     }
-    cout<<"ostatnia: "<<sil%10;
+    cout<<"last: "<<sil%10;
 }

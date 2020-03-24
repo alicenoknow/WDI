@@ -1,4 +1,4 @@
-Zadania na ćwiczenia 2 
+ Zadania na ćwiczenia 2 
  
 1.  Napisz program wczytujący liczbę naturalną z klawiatury i odpowiadający na pytanie,  
 czy liczba ta jest iloczynem dowolnych dwóch wyrazów ciągu Fibonacciego. 
@@ -77,11 +77,11 @@ występujących w jej rozkładzie na czynniki pierwsze. Na przykład: 85=5*17,
 20. Napisać program wyliczający pierwiastek równania x^x=2017 metodą stycznych. 
  
 21. Mamy dane dwa ciągi o następujących zależnościach: 
-A:  a0 = 0, a1 = 1, an = an-1 -
- bn-1 * an-2 
+A:  a0 = 0, a1 = 1, an = an-1 - bn-1 * an-2 
 B:  b0 = 2, bn = bn-1 + 2 * an-1 
 Proszę napisać program, który czyta liczby typu int ze standardowego wejścia i tak 
-długo jak liczby te są kolejnymi wyrazami ciągu An (tj. a0, a1, a2, ...) wypisuje na 
+długo jak liczby te są kolejnymi wyrazami
+ciągu An (tj. a0, a1, a2, ...) wypisuje na 
 standardowe wyjście wyrazy drugiego ciągu Bn (tj. b0, b1, b2, ...). 
  
 22. Napisać program wczytujący dwie liczby naturalne a,b i wypisujący rozwinięcie 
