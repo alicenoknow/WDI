@@ -1,42 +1,27 @@
 #include <iostream>
-#include <math.h>
-
 using namespace std;
 
-int n,r,tmp;
-int d = 1;
-
-
-int main()
-{
-    cout<<"Podaj liczbe: ";
+int main(){
+    int n, r = 0, tmp, d = 1;
+    int result[2600];                                        // approximation of log10(1000!) - number of digits in 1000!
+    for(int i = 1; i < 2600; i++) result[i] = 0;
+    result[0] = 1;
+    cout<<"Type number: ";
     cin>>n;
 
-    int tab[2600];
-    tab[0] = 1;
-
-    for(int i = 2; i<=n; i++)
-    {
-        for(int j = 0; j<d; j++)
-        {
-            tmp = tab[j]*i + r;
-            tab[j] = tmp%10;
-            r = tmp/10;
+    for(int i = 2; i <= n; i++){
+        for(int j = 0; j < d; j++){
+            tmp = result[j] * i + r;
+            result[j] = tmp % 10;
+            r = tmp / 10;
         }
-
-        while(r)
-        {
-            tab[d] = r%10;
+        while(r){
+            result[d] = r % 10;
             d++;
             r /= 10;
         }
-
     }
-
-    for(int i = d-1; i>=0; i--)
-    {
-        cout<<tab[i];
+    for(int i = d-1; i >= 0; i--){
+        cout<<result[i];
     }
-
-
 }

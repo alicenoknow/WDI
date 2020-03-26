@@ -1,37 +1,25 @@
 #include <iostream>
-#include <math.h>
 using namespace std;
 
-int const N = 1000;
-bool podzielna[N] = {false};
-int w;
-
-
-int main()
-{
-
-    for(int i = 2; i<=sqrt(N); i++)
-    {
-        if(!podzielna[i])
-        {
+int main(){
+    int const LIMIT = 1000;
+    bool div[LIMIT];
+    int w, l = 0;
+    for(int i = 0; i < LIMIT; i++) div[i] = false;
+    for(int i = 2; i*i <= LIMIT; i++){
+        if(!div[i]){
             w = i*i;
-            while(w<N)
-            {
-                podzielna[w] = true;
+            while(w < LIMIT){
+                div[w] = true;
                 w += i;
             }
         }
     }
-
-    int ile = 0;
-    for(int i=2; i<N; i++)          //i-liczba;
-    {
-        if(!podzielna[i])
-            {cout << i << endl;
-            ile++;}
-
+    for(int i = 2; i < LIMIT; i++){
+        if(!div[i]){
+            cout << i << endl;
+            l++;
+        }
     }
-
-    cout<<endl<<ile;
-
+    cout<<endl<<l;
 }

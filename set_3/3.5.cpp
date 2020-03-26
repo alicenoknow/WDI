@@ -1,52 +1,34 @@
 #include <iostream>
-#include <math.h>
-
 using namespace std;
 
-int n;
-
-int main()
-{
-   cout<<"Podaj dokladnosc: ";
-   cin>>n;
-
-int e[n];
-int s[n];
-int sil = 1;
-
-for(int i = 0; i < n; i++) {e[i] = 0; s[i] = 0;}
-
+int main(){
+    int n, fact = 1;
+    cout<<"Type precision: ";
+    cin>>n;
+    int e[n],s[n];
+    for(int i = 0; i < n; i++) e[i] = s[i] = 0;
    e[0] = 1;
    s[0] = 1;
 
+ while(true){
+    bool over = true;
+    int carry = 0;
+    fact++;
 
- while(true)
-{
-    bool b = true;
-    int p = 0;
-    sil ++;
-
-     for(int j = n-1; j>=0; j--)
-     {
-        if(s[j]>0) b = false;
-        int tmp = s[j]+e[j]+p;
-        e[j] = tmp%10;
-        p = tmp/10;
+     for(int j = n-1; j >= 0; j--){
+        if(s[j] > 0) over = false;
+        int tmp = s[j] + e[j] + carry;
+        e[j] = tmp % 10;
+        carry = tmp / 10;
      }
-
-    if(b) break;
+    if(over) break;
     int r = 0;
-
-     for(int i = 0; i<n; i++)
-     {
-         int tmp = 10*r+s[i];
-         s[i] = tmp/sil;
-         r = tmp%sil;
-
+    for(int i = 0; i < n; i++){
+         int tmp = 10 * r + s[i];
+         s[i] = tmp / fact;
+         r = tmp % fact;
      }
  }
 cout<<e[0]<<".";
-for(int i = 1; i<n; i++)
-    cout<<e[i];
-
+for(int i = 1; i < n; i++)  cout<<e[i];
 }
