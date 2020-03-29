@@ -2,46 +2,35 @@
 #include <stdlib.h>
 #include <time.h>
 using namespace std;
+const int N = 100;
 
-int const N = 20;
-
-void wypisz(int t[N])
-{
-    for(int i = 0; i < N; i++)
-        cout<<t[i]<<"  ";
-    cout<<endl;
-}
-
-void wyp_los(int t[N])
-{
+void random_array(int tab[N]){
     srand(time(NULL));
-    for(int i = 0; i < N; i++)
-        t[i] = rand()%100;
+    for(int i = 0; i < N; i++){
+        tab[i] = 1 + rand()%N;
+        cout<<tab[i]<<"  ";
+    }
+    return;
 }
 
-int najPod(int t[N])
-{
-    int naj = 1;
-    int d = 1;
-    for(int i = 0; i < N-1; i++)
-    {
-        if(t[i]<t[i+1]) d++;
-        else
-        {   if(d > naj) naj = d;
+void print_arr(int tab[N]){
+        for(int i = 0; i < N; i++)
+        cout<<tab[i]<<"  ";
+}
 
+int main(){
+    int maxD = 0, idx_max = 0, d = 1;
+    int tab[N];
+    random_array(tab);
+    print_arr(tab);
+
+    for(int i = 0; i < N-1; i++){
+        if(tab[i] < tab[i+1])  d++;
+        else{
+            if(d>maxD)
+                {maxD = d; idx_max = i;}
             d = 1;
         }
     }
-    return naj;
-}
-
-int main()
-{
-   int t[N];
-
-   wyp_los(t);
-   wypisz(t);
-
-    cout<<"Naj pod: "<<najPod(t);
-
+    cout<<"Max length: "<<maxD<<"  beginning idx: "<<idx_max;
 }
