@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int const LIMIT = 1000;
+    int const LIMIT = 8000;
     bool div[LIMIT];
     int w, l = 0;
     for(int i = 0; i < LIMIT; i++) div[i] = false;
